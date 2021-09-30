@@ -14,6 +14,7 @@ body, html {
     width: 100%;
     padding: 0;
     margin: 0;
+    font-size: 18px;
 }
 
 body {
@@ -38,7 +39,6 @@ body {
     width: 100%;
     height: 30px;
     transition: .8s cubic-bezier(.57,.07,.34,.93);
-    /*transition: .8s;*/
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -46,9 +46,9 @@ body {
 
 .item p {
     color: black;
-    transition: .8s;
     margin: 0;
     padding: 10px 0 7px 0;
+    transition: color .8s;
 }
 
 .item.active {
@@ -60,7 +60,6 @@ body {
     height: 0;
     border-bottom: 2px solid black;
     flex-grow: 1;
-    /*transition: height 5s ease-in-out;*/
 }
 
 .content-bordered {
@@ -92,8 +91,11 @@ body {
 }
 
 .action {
-    transform: translateX(-100%);
     animation: marquee 10s linear infinite;
+}
+
+.marquee:hover .action {
+    animation-play-state: paused;
 }
 
 .design {
@@ -103,7 +105,6 @@ body {
 .creative {
     color: #39C2BA
 }
-
 
 @keyframes marquee {
     from { transform: translateX(0); }

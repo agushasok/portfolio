@@ -13,7 +13,7 @@ document.querySelectorAll('.item').forEach(item => {
 });
 
 const marqueeEl = document.querySelector('.marquee');
-const marqueeTextEl = marqueeEl.querySelector('h2');
+const marqueeTextEl = marqueeEl.querySelector('.action');
 
 for (let i = 0; i <= Math.ceil(window.innerWidth / marqueeTextEl.clientWidth); i++) {
     marqueeEl.append(marqueeTextEl.cloneNode(true));
