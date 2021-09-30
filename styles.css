@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "TT Runs Trial Bold";
+    src: url("./fonts/TT Runs Trial Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "TTInterfaces-Regular";
+    src: url("./fonts/TTInterfaces-Regular.otf") format("opentype");
+}
+
+body, html {
+    font-family: 'TTInterfaces-Regular', sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 0;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    padding: 0 20px;
+}
+
+.item {
+    width: 100%;
+    height: 30px;
+    transition: .8s cubic-bezier(.57,.07,.34,.93);
+    /*transition: .8s;*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item p {
+    color: black;
+    transition: .8s;
+    margin: 0;
+    padding: 10px 0 7px 0;
+}
+
+.item.active {
+    flex-grow: 100;
+}
+
+.content {
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid black;
+    flex-grow: 1;
+    /*transition: height 5s ease-in-out;*/
+}
+
+.content-bordered {
+    border: 2px solid black;
+}
+
+.item.active .content {
+    flex-grow: 100;
+    border-color: blue;
+}
+
+.item.active p {
+    color: blue;
+}
+
+.marquee {
+    font-family: "TT Runs Trial Bold", sans-serif;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.marquee h2 {
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.action {
+    transform: translateX(-100%);
+    animation: marquee 10s linear infinite;
+}
+
+.design {
+    color: #FF7ACA;
+}
+
+.creative {
+    color: #39C2BA
+}
+
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
