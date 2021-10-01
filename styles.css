@@ -4,12 +4,16 @@
 }
 
 @font-face {
-    font-family: "TTInterfaces-Regular";
-    src: url("./fonts/TTInterfaces-Regular.otf") format("opentype");
+    font-family: "FirsNeue";
+    src: url("./fonts/TTFirsNeue-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Ramillas Italic";
+    src: url("./fonts/TT Ramillas Trial ExtraLight Italic.ttf") format("opentype");
 }
 
 body, html {
-    font-family: 'TTInterfaces-Regular', sans-serif;
+    font-family: 'FirsNeue', sans-serif;
     height: 100%;
     width: 100%;
     padding: 0;
@@ -38,7 +42,7 @@ body {
 .item {
     width: 100%;
     transition: flex-grow .8s cubic-bezier(.57,.07,.34,.93);
-    flex-grow: 1;
+    flex-grow: 0;
     display: flex;
     flex-direction: column;
 }
@@ -58,7 +62,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     flex-grow: 1;
     overflow: auto;
     -ms-overflow-style: none;
@@ -78,22 +82,59 @@ body {
 
 .project {
     width: calc((100% - 20px)/2);
-    overflow: hidden;
+    position: relative;
 }
 
-.cover {
+.cover-info {
+    position: absolute;
+    z-index: 2;
     width: 100%;
-    height: auto;
-    transform: translateX(100%);
-    transition: 1s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.cover-info h2 {
+    font-weight: normal;
+    margin: 0 0 4px 0;
+}
+
+.cover-info p {
+    padding: 0;
+    font-family: "Ramillas Italic", sans-serif;
+    font-size: 14px;
+}
+
+.cover-wrapper {
+    width: 0;
+    overflow: hidden;
+    transition: width .7s;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 0;
+}
+
+.cover-wrapper img {
+    z-index: 5;
 }
 
 .cover-animation {
-    transform: translateX(0);
+    width: 100%;
+    margin: 0 0 0 auto;
+}
+
+.project:hover .cover-wrapper {
+    margin: 0 auto 0 0;
+    width: 0;
 }
 
 .content-bordered {
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .item.active .content {
@@ -101,21 +142,20 @@ body {
     border-color: blue;
 }
 
-.item.active p {
+.item.active > p {
     color: blue;
 }
 
 .marquee {
-    font-family: "TT Runs Trial Bold", sans-serif;
+    font-family: "Ramillas Italic", sans-serif;
     width: 100%;
     font-size: 40px;
-    font-weight: bold;
     display: flex;
     flex-wrap: nowrap;
 }
 
 .marquee h2 {
-    text-transform: uppercase;
+    font-weight: normal;
     white-space: nowrap;
     margin: 0;
 }
@@ -139,4 +179,8 @@ body {
 @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
+}
+
+.d-none {
+    display: none;
 }
