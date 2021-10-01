@@ -47,11 +47,32 @@ body {
     flex-direction: column;
 }
 
-.item p {
+.label-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.label-wrapper p {
     color: black;
     margin: 0;
     padding: 10px 0 7px 0;
     transition: color .8s;
+}
+
+.label-wrapper .arrow {
+    height: 1em;
+    margin: 2px 5px 0 -23px;
+    transition: margin-left .5s, transform .8s;
+}
+
+.label-wrapper:hover .arrow {
+    margin-left: 0;
+}
+
+.item.active .label-wrapper .arrow {
+    margin-left: 0;
+    transform: rotateZ(90deg);
 }
 
 .item.active {
@@ -140,11 +161,6 @@ body {
 
 .item.active .content {
     flex-grow: 100;
-    border-color: blue;
-}
-
-.item.active > p {
-    color: blue;
 }
 
 .marquee {
