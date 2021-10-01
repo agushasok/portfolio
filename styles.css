@@ -85,16 +85,6 @@ body {
     position: relative;
 }
 
-@media (max-device-width: 800px) {
-    .project {
-        width: calc(100% - 20px);
-    }
-
-    .item > p {
-        font-size: 36px;
-    }
-}
-
 .cover-info {
     position: absolute;
     z-index: 2;
@@ -194,4 +184,22 @@ body {
 
 .d-none {
     display: none;
+}
+
+@media (max-device-width: 800px) {
+    .project {
+        width: calc(100% - 20px);
+    }
+
+    .item > p {
+        font-size: 36px;
+    }
+
+    .cover-info h2 {
+        font-size: 54px;
+    }
+
+    .cover-info p {
+        font-size: 28px;
+    }
 }
