@@ -61,7 +61,8 @@ body {
 }
 
 .label-wrapper .arrow {
-    height: 1em;
+    height: 18px;
+    width: auto;
     margin: 2px 5px 0 -23px;
     transition: margin-left .5s, transform .8s;
 }
@@ -207,7 +208,7 @@ body {
         width: calc(100% - 20px);
     }
 
-    .item > p {
+    .label-wrapper > p {
         font-size: 36px;
     }
 
