@@ -12,6 +12,10 @@
     src: url("./fonts/TT Ramillas Trial ExtraLight Italic.ttf") format("opentype");
 }
 
+* {
+    cursor: url(./icons/cursor.png) 8 8, auto !important;
+}
+
 body, html {
     font-family: 'FirsNeue', sans-serif;
     height: 100%;
@@ -179,7 +183,7 @@ body {
 }
 
 .action {
-    animation: marquee 10s linear infinite;
+    animation: marquee 7s linear infinite;
 }
 
 .marquee:hover .action {
