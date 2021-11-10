@@ -1,3 +1,5 @@
+const caseEl = document.querySelector('.case');
+
 document.querySelectorAll('.item').forEach(item => {
     item.addEventListener('click', () => {
         const activeEl = document.querySelector('.item.active');
@@ -16,8 +18,9 @@ document.querySelectorAll('.item').forEach(item => {
             }, (i + 1) * 200));
 
             item.querySelectorAll('.project').forEach(elem => {
-                elem.addEventListener('click', (e) => {
-                    document.querySelector('.case').classList.add('case-show');
+                elem.addEventListener('click', () => {
+                    caseEl.classList.remove('d-none');
+                    setTimeout(() => caseEl.classList.add('case-show'), 0);
                 });
             });
 
@@ -49,3 +52,12 @@ for (let i = 0; i <= Math.ceil(window.innerWidth / marqueeTextEl.clientWidth); i
 document.querySelectorAll('.project img').forEach(elem => {
     elem.style.width = document.querySelector('.project').clientWidth + 'px';
 })
+
+document.querySelector('.back-btn').addEventListener('click', () => {
+    caseEl.classList.remove('case-show');
+    caseEl.classList.add('case-hide');
+    setTimeout(() => {
+        caseEl.classList.remove('case-hide');
+        caseEl.classList.add('d-none');
+    }, 500)
+});

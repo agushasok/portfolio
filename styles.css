@@ -94,23 +94,6 @@ body {
     overflow: hidden;
 }
 
-.case {
-    position: absolute;
-    box-sizing: border-box;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    transition: .5s;
-    padding: 25px;
-    overflow: auto;
-    transform: translateX(100%);
-}
-
-.case-show {
-    transform: translateX(0);
-    z-index: 100;
-}
-
 .projects::-webkit-scrollbar {
     display: none;
 }
