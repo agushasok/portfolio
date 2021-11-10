@@ -15,6 +15,12 @@ document.querySelectorAll('.item').forEach(item => {
                 elem.classList.add('cover-animation');
             }, (i + 1) * 200));
 
+            item.querySelectorAll('.project').forEach(elem => {
+                elem.addEventListener('click', (e) => {
+                    document.querySelector('.case').classList.add('case-show');
+                });
+            });
+
             item.querySelectorAll('.cover-info').forEach((elem, i) => {
                 setTimeout(() => {
                     elem.classList.remove('d-none');
