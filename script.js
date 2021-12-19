@@ -1,9 +1,14 @@
 const caseEl = document.querySelector('.case');
 
 document.querySelectorAll('.item').forEach(item => {
-    item.addEventListener('click', () => {
+    item.querySelector('.label-wrapper').addEventListener('click', () => {
         const activeEl = document.querySelector('.item.active');
-        if (activeEl === item) return;
+        if (activeEl === item) {
+            if (activeEl.querySelector('p').innerText === 'работы') {
+                document.querySelector('.back-btn').click();
+            }
+            return;
+        }
 
         setTimeout(() => {
             activeEl.querySelector('.content').classList.remove('content-bordered');

@@ -43,3 +43,45 @@
     filter: invert(100%);
     mix-blend-mode: difference;
 }
+
+.case-title {
+    margin-bottom: 0;
+}
+
+.case-content .description {
+    margin: 0;
+    font-family: 'Ramillas Italic', sans-serif;
+    font-size: 16px;
+    color: #757575;
+}
+
+.case-content .info {
+    width: 70%;
+    margin: 40px 0;
+}
+
+.media-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.media-block ~.media-block {
+    margin-top: 5px;
+}
+
+.media-block .img-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.img-wrapper .image {
+    width: 100%;
+    height: auto;
+}
+
+.img-wrapper .video {
+    width: 100%;
+    height: auto;
+}

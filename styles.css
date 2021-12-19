@@ -13,7 +13,7 @@
 }
 
 * {
-    cursor: url(./icons/cursor.png) 8 8, auto !important;
+    /*cursor: url(./icons/cursor.png) 8 8, auto !important;*/
 }
 
 body, html {
@@ -55,6 +55,7 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .label-wrapper p {
@@ -112,8 +113,9 @@ body {
 }
 
 .project {
-    width: calc((100% - 20px)/2);
+    width: calc((100% - 20px)/ 2);
     position: relative;
+    cursor: pointer;
 }
 
 .cover-info {
