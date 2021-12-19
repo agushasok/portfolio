@@ -30,7 +30,7 @@
 .header {
     width: 100%;
     height: 100%;
-    background: center top no-repeat url("projects/chaika/header.jpg");
+    background: center top no-repeat;
     background-size: cover;
 }
 
