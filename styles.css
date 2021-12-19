@@ -114,6 +114,7 @@ body {
 
 .project {
     width: calc((100% - 20px)/ 2);
+    height: fit-content;
     position: relative;
     cursor: pointer;
 }
