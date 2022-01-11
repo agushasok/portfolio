@@ -99,11 +99,14 @@ document.querySelectorAll('.item').forEach(item => {
             fillProjects();
         }
 
-        if (activeEl.querySelector('p').innerText === 'работы') {
+        if (item.querySelector('p').innerText !== 'работы') {
             setTimeout(
                 () => document.querySelector('.projects').innerHTML = '',
-                (activeEl.querySelectorAll('.cover-wrapper').length) * 780
+                700
             );
+        }
+
+        if (activeEl.querySelector('p').innerText === 'работы') {
             activeEl.querySelectorAll('.cover-wrapper')
                 .forEach((elem, i, parent) => setTimeout(() => {
                     elem.classList.remove('cover-animation');
