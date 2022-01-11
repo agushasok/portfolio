@@ -39,7 +39,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: calc(100% - 60px);
     padding: 0 20px;
 }
 
@@ -61,14 +61,14 @@ body {
 .label-wrapper p {
     color: black;
     margin: 0;
-    padding: 10px 0 7px 0;
+    padding: 2px 0 2px 0;
     transition: color .8s;
 }
 
 .label-wrapper .arrow {
-    height: 18px;
+    height: 15px;
     width: auto;
-    margin: 2px 5px 0 -23px;
+    margin: 2px 5px 0 -20px;
     transition: margin-left .5s, transform .8s;
 }
 
@@ -179,9 +179,12 @@ body {
 .marquee {
     font-family: "Ramillas Italic", sans-serif;
     width: 100%;
-    font-size: 40px;
+    font-size: 28px;
+    height: 60px;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .marquee h2 {

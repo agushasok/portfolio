@@ -1,4 +1,4 @@
-import { projects } from "./projects.js";
+import {projects} from "./projects.js";
 
 const caseEl = document.querySelector('.case');
 const backBtnFunc = () => {
@@ -33,25 +33,25 @@ function fillProjects() {
                 <h1 class="case-title"> ${item.case.title} </h1>
                 <p class="description"> ${item.case.description} </p>
                 ${item.case.content.map(contentItem => {
-                    switch (contentItem.type) {
-                        case 'text':
-                            return '<p class="info">' + contentItem.data + '</p>'
-                        case 'images':
-                            return '<div class="media-block">' + contentItem.data.map(imgUrl => 
-                                '<div class="img-wrapper"><img class="image" src="./projects/'
-                                + item.systemName
-                                + '/'
-                                + imgUrl
-                                + '" alt=""></div>'
-                            ).join('') + '</div>'
-                            case 'video':
-                                return '<div class="media-block"><div class="img-wrapper"><video loop autoplay class="video" src="./projects/'
-                                    + item.systemName
-                                    + '/'
-                                    + contentItem.data
-                                    + '"></video></div></div>'
-                    }
-                }).join('')}
+                switch (contentItem.type) {
+                    case 'text':
+                        return '<p class="info">' + contentItem.data + '</p>'
+                    case 'images':
+                        return '<div class="media-block">' + contentItem.data.map(imgUrl =>
+                            '<div class="img-wrapper"><img class="image" src="./projects/'
+                            + item.systemName
+                            + '/'
+                            + imgUrl
+                            + '" alt=""></div>'
+                        ).join('') + '</div>'
+                    case 'video':
+                        return '<div class="media-block"><div class="img-wrapper"><video loop autoplay class="video" src="./projects/'
+                            + item.systemName
+                            + '/'
+                            + contentItem.data
+                            + '"></video></div></div>'
+                }
+            }).join('')}
             `;
 
             document.querySelector('.back-btn').removeEventListener('click', backBtnFunc);
@@ -94,14 +94,19 @@ document.querySelectorAll('.item').forEach(item => {
         item.querySelector('.content').classList.add('content-bordered');
         item.classList.add('active');
 
-        if (item.querySelector('p').innerText === 'работы' ) {
+        if (item.querySelector('p').innerText === 'работы') {
             fillProjects();
         }
 
         if (activeEl.querySelector('p').innerText === 'работы') {
-            activeEl.querySelectorAll('.cover-wrapper').forEach((elem, i, parent) => setTimeout(() => {
-                elem.classList.remove('cover-animation');
-            }, (parent.length - i - 1) * 80));
+            setTimeout(
+                () => document.querySelector('.projects').innerHTML = '',
+                (activeEl.querySelectorAll('.cover-wrapper').length) * 780
+            );
+            activeEl.querySelectorAll('.cover-wrapper')
+                .forEach((elem, i, parent) => setTimeout(() => {
+                    elem.classList.remove('cover-animation');
+                }, (parent.length - i - 1) * 80));
             activeEl.querySelectorAll('.cover-info').forEach(elem => {
                 elem.classList.add('d-none');
             });
