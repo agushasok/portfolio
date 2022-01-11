@@ -228,7 +228,15 @@ body {
     }
 
     .label-wrapper > p {
-        font-size: 36px;
+        font-size: 44px;
+        padding: 4px 0 4px 0;
+    }
+
+    .label-wrapper .arrow {
+        height: 30px;
+        width: auto;
+        margin: 2px 5px 0 -35px;
+        transition: margin-left .5s, transform .8s;
     }
 
     .cover-info h2 {
@@ -237,5 +245,10 @@ body {
 
     .cover-info p {
         font-size: 28px;
+    }
+
+    .marquee {
+        font-size: 50px;
+        height: 85px;
     }
 }
