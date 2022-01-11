@@ -85,3 +85,30 @@
     width: 100%;
     height: auto;
 }
+
+.media-block:last-child {
+    padding-bottom: 25px;
+}
+
+@media (max-device-width: 800px) {
+    .case-content .description {
+        font-size: 24px;
+    }
+
+    .case-content .case-title {
+        font-size: 62px;
+    }
+
+    .case-content .info {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .media-block {
+        gap: 10px;
+    }
+
+    .media-block ~.media-block {
+        margin-top: 10px;
+    }
+}
