@@ -99,7 +99,7 @@
         font-size: 62px;
     }
 
-    .case-content .info {
+    .case-content .info, .case-content .description {
         width: 100%;
         font-size: 24px;
     }
@@ -110,5 +110,9 @@
 
     .media-block ~.media-block {
         margin-top: 10px;
+    }
+
+    .back-btn {
+        display: none;
     }
 }
