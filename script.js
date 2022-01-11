@@ -45,7 +45,8 @@ function fillProjects() {
                             + '" alt=""></div>'
                         ).join('') + '</div>'
                     case 'video':
-                        return '<div class="media-block"><div class="img-wrapper"><video loop playsinline autoplay class="video" src="./projects/'
+                        return '<div class="media-block"><div class="img-wrapper">' +
+                            '<video loop playsinline data-wf-ignore="true" data-object-fit="cover" autoplay class="video" src="./projects/'
                             + item.systemName
                             + '/'
                             + contentItem.data
