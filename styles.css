@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     height: calc(100% - 60px);
-    padding: 0 20px;
+    padding: 5px 30px 3px;
 }
 
 .item {
@@ -219,6 +219,10 @@ body {
 }
 
 @media (max-device-width: 800px) {
+    .wrapper {
+        padding: 0 20px 8px;
+    }
+
     .project {
         width: calc(100% - 20px);
     }
