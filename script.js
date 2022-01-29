@@ -78,6 +78,16 @@ function fillProjects() {
     })
 }
 
+function fillAboutUs() {
+    const imageNumber = Math.round(Math.random() * 2) + 1;
+    document.querySelector('.about-me-img').style.backgroundImage = 'url("../about-us/Photo_' + imageNumber + '.png")';
+}
+
+function fillContacts() {
+    const imageNumber = Math.round(Math.random() * 2);
+    document.querySelector('.contacts-img').style.backgroundImage = 'url("../contacts/Photo_0' + imageNumber + '.png")';
+}
+
 document.querySelectorAll('.item').forEach(item => {
     item.querySelector('.label-wrapper').addEventListener('click', () => {
         const activeEl = document.querySelector('.item.active');
@@ -96,6 +106,8 @@ document.querySelectorAll('.item').forEach(item => {
         item.classList.add('active');
 
         if (item.querySelector('p').innerText === 'работы') {
+            document.querySelector('.about-me-img').style.backgroundPosition = 'center top'
+            document.querySelector('.contacts-img').style.backgroundPosition = 'center bottom'
             fillProjects();
         }
 
@@ -115,6 +127,21 @@ document.querySelectorAll('.item').forEach(item => {
                 elem.classList.add('d-none');
             });
         }
+
+        if (item.querySelector('p').innerText === 'о нас') {
+            if (activeEl.querySelector('p').innerText === 'контакты') {
+                document.querySelector('.contacts-img').style.backgroundPosition = 'center top'
+                document.querySelector('.about-me-img').style.backgroundPosition = 'center bottom'
+            }
+            fillAboutUs();
+        }
+        if (item.querySelector('p').innerText === 'контакты') {
+            if (activeEl.querySelector('p').innerText === 'о нас') {
+                document.querySelector('.contacts-img').style.backgroundPosition = 'center top'
+                document.querySelector('.about-me-img').style.backgroundPosition = 'center bottom'
+            }
+            fillContacts();
+        }
     })
 });
 
@@ -124,3 +151,9 @@ const marqueeTextEl = marqueeEl.querySelector('.action');
 for (let i = 0; i <= Math.ceil(window.innerWidth / marqueeTextEl.clientWidth); i++) {
     marqueeEl.append(marqueeTextEl.cloneNode(true));
 }
+
+document.querySelectorAll('.about-me-img').forEach(item =>
+    item.style.backgroundSize = 'auto ' + document.querySelector('.item.active').clientHeight + 'px'
+)
+
+fillAboutUs();

@@ -176,6 +176,21 @@ body {
     flex-grow: 100;
 }
 
+.about-me {
+    width: 50%;
+    height: 100%;
+}
+
+.about-me-img {
+    background: center top no-repeat;
+    background-size: auto 100%;
+}
+
+.contacts-img {
+    background: center bottom no-repeat;
+    background-size: auto 100%;
+}
+
 .marquee {
     font-family: "Ramillas Italic", sans-serif;
     width: 100%;
@@ -216,6 +231,10 @@ body {
 
 .d-none {
     display: none;
+}
+
+.d-flex {
+    display: flex;
 }
 
 @media (max-device-width: 800px) {
