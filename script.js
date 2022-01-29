@@ -80,12 +80,12 @@ function fillProjects() {
 
 function fillAboutUs() {
     const imageNumber = Math.round(Math.random() * 2) + 1;
-    document.querySelector('.about-me-img').style.backgroundImage = 'url("../about-us/Photo_' + imageNumber + '.png")';
+    document.querySelector('.about-me-img').style.backgroundImage = 'url("./about-us/Photo_' + imageNumber + '.png")';
 }
 
 function fillContacts() {
     const imageNumber = Math.round(Math.random() * 2);
-    document.querySelector('.contacts-img').style.backgroundImage = 'url("../contacts/Photo_0' + imageNumber + '.png")';
+    document.querySelector('.contacts-img').style.backgroundImage = 'url("./contacts/Photo_0' + imageNumber + '.png")';
 }
 
 document.querySelectorAll('.item').forEach(item => {
