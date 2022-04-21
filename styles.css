@@ -107,6 +107,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     padding: 25px;
+    align-content: flex-start;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;

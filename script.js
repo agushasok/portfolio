@@ -28,7 +28,6 @@ function fillProjects() {
 
         project.addEventListener('click', () => {
             document.querySelector('.case-content').innerHTML = `
-                <img class="back-btn" src="./icons/arrow.svg" alt="arrow">
                 <div class="header" style="background-image: url('./projects/${item.systemName}/${item.case.mainImgUrl}')"></div>
                 <h1 class="case-title"> ${item.case.title} </h1>
                 <p class="description"> ${item.case.description} </p>
