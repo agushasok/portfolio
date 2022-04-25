@@ -54,6 +54,10 @@ function fillProjects() {
             }).join('')}
             `;
 
+            setTimeout(() => {
+                document.querySelector('.case-show').scrollTo(0, 0);
+            }, 10)
+
             document.querySelector('.back-btn').removeEventListener('click', backBtnFunc);
             document.querySelector('.back-btn').addEventListener('click', backBtnFunc);
         });
@@ -66,6 +70,25 @@ function fillProjects() {
         setTimeout(() => {
             project.querySelector('.cover-wrapper').classList.add('cover-animation');
         }, (i + 1) * 200);
+
+        // setTimeout(() => {
+        //     project.addEventListener('mouseenter', e => {
+        //         const activeProj = document.querySelector('.active-proj');
+        //
+        //         if (project.offsetTop > activeProj?.offsetTop) {
+        //             project.querySelector('.cover-wrapper').style.width = '100%';
+        //             project.querySelector('.cover-wrapper').style.transition = 'height .7s';
+        //
+        //             setTimeout(() => project.querySelector('.cover-wrapper').style.height = '0', 100)
+        //         }
+        //
+        //         e.target.classList.add('active-proj')
+        //         activeProj?.classList.remove('active-proj')
+        //
+        //         // console.log('X: ', e.offsetX);
+        //         // console.log('project: ', project);
+        //     })
+        // }, 0);
 
         setTimeout(() => {
             project.querySelector('.cover-info').classList.remove('d-none');

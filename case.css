@@ -59,18 +59,20 @@
 
 .case-content .info {
     width: 70%;
-    margin: 40px 0;
+    margin: 65px 0;
+    font-family: "Norms Regular", sans-serif;
+    line-height: 1.6em;
 }
 
 .media-block {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 }
 
 .media-block ~.media-block {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .media-block .img-wrapper {

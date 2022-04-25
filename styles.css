@@ -11,6 +11,10 @@
     font-family: "Ramillas Italic";
     src: url("./fonts/TT Ramillas Trial ExtraLight Italic.ttf") format("opentype");
 }
+@font-face {
+    font-family: "Norms Regular";
+    src: url("./fonts/TTNorms-Regular.otf") format("opentype");
+}
 
 * {
     /*cursor: url(./icons/cursor.png) 8 8, auto !important;*/
@@ -115,7 +119,7 @@ body {
 
 .project {
     width: calc((100% - 20px)/ 2);
-    height: fit-content;
+    height: auto;
     position: relative;
     cursor: pointer;
 }
