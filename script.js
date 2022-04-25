@@ -69,7 +69,7 @@ function fillProjects() {
 
         setTimeout(() => {
             project.querySelector('.cover-wrapper').classList.add('cover-animation');
-        }, (i + 1) * 200);
+        }, 0);
 
         // setTimeout(() => {
         //     project.addEventListener('mouseenter', e => {
