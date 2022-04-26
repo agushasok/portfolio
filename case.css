@@ -112,6 +112,10 @@
         font-size: 24px;
     }
 
+    .case-content .info {
+        font-size: 30px;
+    }
+
     .media-block {
         gap: 10px;
     }
